@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_tamm_fuel_log_list" model="ir.ui.view">
+        <field name="name">tamm.fuel.log.list</field>
+        <field name="model">tamm.fuel.log</field>
+        <field name="arch" type="xml">
+            <list string="Fuel Logs" editable="bottom">
+                <field name="date"/>
+                <field name="vehicle_id"/>
+                <field name="driver_id"/>
+                <field name="fuel_type"/>
+                <field name="quantity"/>
+                <field name="price_per_liter"/>
+                <field name="total_cost" sum="Total"/>
+                <field name="odometer"/>
+                <field name="station_name"/>
+                <field name="invoice_reference"/>
+                <field name="currency_id" column_invisible="1"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_tamm_fuel_log_form" model="ir.ui.view">
+        <field name="name">tamm.fuel.log.form</field>
+        <field name="model">tamm.fuel.log</field>
+        <field name="arch" type="xml">
+            <form string="Fuel Log">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="vehicle_id"/>
+                            <field name="driver_id"/>
+                            <field name="date"/>
+                            <field name="fuel_type"/>
+                        </group>
+                        <group>
+                            <field name="quantity"/>
+                            <field name="price_per_liter"/>
+                            <field name="total_cost"/>
+                            <field name="currency_id" invisible="1"/>
+                            <field name="odometer"/>
+                        </group>
+                    </group>
+                    <group>
+                        <group>
+                            <field name="station_name"/>
+                            <field name="invoice_reference"/>
+                        </group>
+                        <group>
+                            <field name="notes"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_tamm_fuel_log_pivot" model="ir.ui.view">
+        <field name="name">tamm.fuel.log.pivot</field>
+        <field name="model">tamm.fuel.log</field>
+        <field name="arch" type="xml">
+            <pivot string="Fuel Analysis">
+                <field name="vehicle_id" type="row"/>
+                <field name="date" interval="month" type="col"/>
+                <field name="quantity" type="measure"/>
+                <field name="total_cost" type="measure"/>
+            </pivot>
+        </field>
+    </record>
+
+    <record id="view_tamm_fuel_log_graph" model="ir.ui.view">
+        <field name="name">tamm.fuel.log.graph</field>
+        <field name="model">tamm.fuel.log</field>
+        <field name="arch" type="xml">
+            <graph string="Fuel Consumption" type="line">
+                <field name="date" interval="month"/>
+                <field name="quantity" type="measure"/>
+            </graph>
+        </field>
+    </record>
+
+    <record id="view_tamm_fuel_log_search" model="ir.ui.view">
+        <field name="name">tamm.fuel.log.search</field>
+        <field name="model">tamm.fuel.log</field>
+        <field name="arch" type="xml">
+            <search string="Search Fuel Logs">
+                <field name="vehicle_id"/>
+                <field name="driver_id"/>
+                <field name="station_name"/>
+                <filter name="this_month" string="This Month" 
+                        domain="[('date', '&gt;=', context_today().strftime('%Y-%m-01'))]"/>
+                <filter name="this_year" string="This Year" 
+                        domain="[('date', '&gt;=', context_today().strftime('%Y-01-01'))]"/>
+                <group expand="0" string="Group By">
+                    <filter name="group_vehicle" string="Vehicle" context="{'group_by': 'vehicle_id'}"/>
+                    <filter name="group_driver" string="Driver" context="{'group_by': 'driver_id'}"/>
+                    <filter name="group_month" string="Month" context="{'group_by': 'date:month'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_tamm_fuel_log" model="ir.actions.act_window">
+        <field name="name">Fuel Logs</field>
+        <field name="res_model">tamm.fuel.log</field>
+        <field name="view_mode">list,form,pivot,graph</field>
+        <field name="context">{'search_default_this_month': 1}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a new fuel log
+            </p>
+        </field>
+    </record>
+</odoo>

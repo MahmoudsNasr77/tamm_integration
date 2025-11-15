@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Main Menu -->
+    <menuitem id="menu_tamm_root"
+        name="Tamm Fleet"
+        sequence="50"
+       />
+
+    <!-- Dashboard -->
+    <menuitem id="menu_tamm_dashboard"
+        name="Dashboard"
+        parent="menu_tamm_root"
+        action="action_tamm_dashboard"
+        sequence="1"/>
+
+    <!-- Tracking Section -->
+    <menuitem id="menu_tamm_tracking_section"
+        name="Tracking"
+        parent="menu_tamm_root"
+        sequence="10"/>
+
+    <menuitem id="menu_tamm_tracking"
+        name="Vehicle Tracking"
+        parent="menu_tamm_tracking_section"
+        action="action_tamm_tracking"
+        sequence="1"/>
+
+    <menuitem id="menu_tamm_route"
+        name="Routes"
+        parent="menu_tamm_tracking_section"
+        action="action_tamm_route"
+        sequence="2"/>
+
+    <!-- Maintenance Section -->
+    <menuitem id="menu_tamm_maintenance_section"
+        name="Maintenance"
+        parent="menu_tamm_root"
+        sequence="20"/>
+
+    <menuitem id="menu_tamm_maintenance"
+        name="Maintenance Records"
+        parent="menu_tamm_maintenance_section"
+        action="action_tamm_maintenance"
+        sequence="1"/>
+
+    <!-- Fuel Section -->
+    <menuitem id="menu_tamm_fuel_section"
+        name="Fuel"
+        parent="menu_tamm_root"
+        sequence="30"/>
+
+    <menuitem id="menu_tamm_fuel"
+        name="Fuel Logs"
+        parent="menu_tamm_fuel_section"
+        action="action_tamm_fuel_log"
+        sequence="1"/>
+
+    <!-- Drivers Section -->
+    <menuitem id="menu_tamm_driver_section"
+        name="Drivers"
+        parent="menu_tamm_root"
+        sequence="40"/>
+
+    <menuitem id="menu_tamm_driver"
+        name="Driver Performance"
+        parent="menu_tamm_driver_section"
+        action="action_tamm_driver"
+        sequence="1"/>
+
+    <!-- Alerts Section -->
+    <menuitem id="menu_tamm_alert_section"
+        name="Alerts"
+        parent="menu_tamm_root"
+        sequence="50"/>
+
+    <menuitem id="menu_tamm_alert"
+        name="All Alerts"
+        parent="menu_tamm_alert_section"
+        action="action_tamm_alert"
+        sequence="1"/>
+
+    <!-- Reports Section -->
+    <menuitem id="menu_tamm_report_section"
+        name="Reports"
+        parent="menu_tamm_root"
+        sequence="60"/>
+
+    <menuitem id="menu_tamm_report"
+        name="Fleet Analytics"
+        parent="menu_tamm_report_section"
+        action="action_tamm_report"
+        sequence="1"/>
+
+    <!-- Configuration -->
+    <menuitem id="menu_tamm_config_section"
+        name="Configuration"
+        parent="menu_tamm_root"
+        sequence="100"
+        groups="group_tamm_manager"/>
+
+    <menuitem id="menu_tamm_config"
+        name="Tamm Settings"
+        parent="menu_tamm_config_section"
+        action="action_tamm_config"
+        sequence="1"/>
+
+
+
+</odoo>

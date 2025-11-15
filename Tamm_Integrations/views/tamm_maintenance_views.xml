@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_tamm_maintenance_list" model="ir.ui.view">
+        <field name="name">tamm.maintenance.list</field>
+        <field name="model">tamm.maintenance</field>
+        <field name="arch" type="xml">
+            <list string="Maintenance" decoration-warning="state == 'due'" 
+                  decoration-success="state == 'completed'">
+                <field name="name"/>
+                <field name="vehicle_id"/>
+                <field name="maintenance_type"/>
+                <field name="date"/>
+                <field name="due_date"/>
+                <field name="cost" sum="Total Cost"/>
+                <field name="state" widget="badge" 
+                       decoration-warning="state == 'due'"
+                       decoration-success="state == 'completed'"
+                       decoration-info="state == 'scheduled'"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_tamm_maintenance_form" model="ir.ui.view">
+        <field name="name">tamm.maintenance.form</field>
+        <field name="model">tamm.maintenance</field>
+        <field name="arch" type="xml">
+            <form string="Maintenance">
+                <header>
+                    <button name="action_start" string="Start" type="object" 
+                            invisible="state != 'scheduled'" class="btn-primary"/>
+                    <button name="action_complete" string="Complete" type="object" 
+                            invisible="state not in ['scheduled', 'in_progress']" 
+                            class="btn-primary"/>
+                    <button name="action_cancel" string="Cancel" type="object" 
+                            invisible="state in ['completed', 'cancelled']"/>
+                    <field name="state" widget="statusbar" 
+                           statusbar_visible="scheduled,in_progress,completed"/>
+                </header>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="vehicle_id"/>
+                            <field name="name"/>
+                            <field name="maintenance_type"/>
+                            <field name="date"/>
+                            <field name="due_date"/>
+                        </group>
+                        <group>
+                            <field name="odometer"/>
+                            <field name="cost"/>
+                            <field name="currency_id" invisible="1"/>
+                            <field name="technician_id"/>
+                            <field name="service_center"/>
+                            <field name="invoice_ref"/>
+                        </group>
+                    </group>
+                    <group string="Notes">
+                        <field name="notes" nolabel="1"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_tamm_maintenance_calendar" model="ir.ui.view">
+        <field name="name">tamm.maintenance.calendar</field>
+        <field name="model">tamm.maintenance</field>
+        <field name="arch" type="xml">
+            <calendar string="Maintenance Calendar" date_start="due_date" 
+                      color="state" quick_create="False">
+                <field name="vehicle_id"/>
+                <field name="name"/>
+                <field name="maintenance_type"/>
+            </calendar>
+        </field>
+    </record>
+
+    <record id="view_tamm_maintenance_search" model="ir.ui.view">
+        <field name="name">tamm.maintenance.search</field>
+        <field name="model">tamm.maintenance</field>
+        <field name="arch" type="xml">
+            <search string="Search Maintenance">
+                <field name="name"/>
+                <field name="vehicle_id"/>
+                <field name="maintenance_type"/>
+                <filter name="due" string="Due" domain="[('state', '=', 'due')]"/>
+                <filter name="scheduled" string="Scheduled" domain="[('state', '=', 'scheduled')]"/>
+                <filter name="completed" string="Completed" domain="[('state', '=', 'completed')]"/>
+                <separator/>
+                <filter name="this_month" string="This Month" 
+                        domain="[('due_date', '&gt;=', context_today().strftime('%Y-%m-01'))]"/>
+                <group expand="0" string="Group By">
+                    <filter name="group_vehicle" string="Vehicle" context="{'group_by': 'vehicle_id'}"/>
+                    <filter name="group_type" string="Type" context="{'group_by': 'maintenance_type'}"/>
+                    <filter name="group_state" string="Status" context="{'group_by': 'state'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_tamm_maintenance" model="ir.actions.act_window">
+        <field name="name">Maintenance</field>
+        <field name="res_model">tamm.maintenance</field>
+        <field name="view_mode">list,form,calendar</field>
+        <field name="context">{'search_default_scheduled': 1, 'search_default_due': 1}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Schedule a new maintenance
+            </p>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_tamm_config_form" model="ir.ui.view">
+        <field name="name">tamm.config.form</field>
+        <field name="model">tamm.config</field>
+        <field name="arch" type="xml">
+            <form string="Tamm Configuration">
+                <header>
+                    <button name="test_connection" string="Test Connection" 
+                            type="object" class="btn-primary"/>
+                    <button name="action_sync_now" string="Sync Now" 
+                            type="object" class="btn-secondary"/>
+                    <field name="sync_status" widget="badge" 
+                           decoration-success="sync_status == 'success'"
+                           decoration-danger="sync_status == 'failed'"
+                           decoration-info="sync_status == 'pending'"/>
+                </header>
+                <sheet>
+            
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="company_id" groups="base.group_multi_company"/>
+                            <field name="sync_interval"/>
+                        </group>
+                        <group>
+                            <field name="last_sync" readonly="1"/>
+                            <field name="sync_error" readonly="1" invisible="sync_error == False"/>
+                        </group>
+                    </group>
+                    <group string="API Configuration">
+                        <group>
+                            <field name="api_url" placeholder="https://api.tamm.sa"/>
+                        </group>
+                        <group>
+                            <field name="api_key" password="True"/>
+                            <field name="api_secret" password="True"/>
+                        </group>
+                    </group>
+
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="view_tamm_config_list" model="ir.ui.view">
+        <field name="name">tamm.config.list</field>
+        <field name="model">tamm.config</field>
+        <field name="arch" type="xml">
+            <list string="Tamm Configurations">
+                <field name="name"/>
+                <field name="company_id" groups="base.group_multi_company"/>
+                <field name="active" widget="boolean_toggle"/>
+                <field name="sync_status" widget="badge" 
+                       decoration-success="sync_status == 'success'"
+                       decoration-danger="sync_status == 'failed'"/>
+                <field name="last_sync"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="action_tamm_config" model="ir.actions.act_window">
+        <field name="name">Tamm Configuration</field>
+        <field name="res_model">tamm.config</field>
+        <field name="view_mode">list,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Configure Tamm Integration
+            </p>
+            <p>
+                Set up your Tamm API credentials to sync vehicle data.
+            </p>
+        </field>
+    </record>
+</odoo>

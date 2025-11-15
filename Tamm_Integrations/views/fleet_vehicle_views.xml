@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_fleet_vehicle_form_inherit_tamm" model="ir.ui.view">
+        <field name="name">fleet.vehicle.form.tamm</field>
+        <field name="model">fleet.vehicle</field>
+        <field name="inherit_id" ref="fleet.fleet_vehicle_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@name='button_box']" position="inside">
+                <button name="sync_with_tamm" type="object" 
+                        class="oe_stat_button" icon="fa-refresh"
+                        invisible="tamm_vehicle_id == False">
+                    <div class="o_field_widget o_stat_info">
+                        <span class="o_stat_text">Sync</span>
+                        <span class="o_stat_text">Tamm</span>
+                    </div>
+                </button>
+                <button name="action_view_tracking" type="object" 
+                        class="oe_stat_button" icon="fa-location-arrow">
+                    <field name="tracking_count" widget="statinfo" string="Tracking"/>
+                </button>
+                <button name="action_view_maintenance" type="object" 
+                        class="oe_stat_button" icon="fa-wrench"
+                        decoration-danger="maintenance_due">
+                    <field name="maintenance_count" widget="statinfo" string="Maintenance"/>
+                </button>
+                <button name="action_view_fuel_logs" type="object" 
+                        class="oe_stat_button" icon="fa-tint">
+                    <field name="fuel_log_count" widget="statinfo" string="Fuel Logs"/>
+                </button>
+                <button name="action_view_alerts" type="object" 
+                        class="oe_stat_button" icon="fa-bell"
+                        decoration-warning="open_alert_count > 0">
+                    <field name="open_alert_count" widget="statinfo" string="Alerts"/>
+                </button>
+            </xpath>
+            
+            <xpath expr="//notebook" position="inside">
+                <page string="Tamm Integration" name="tamm_integration">
+                    <group>
+                        <group string="Integration">
+                            <field name="tamm_vehicle_id"/>
+                            <field name="gps_device_id"/>
+                            <field name="gps_provider"/>
+                        </group>
+                        <group string="Current Location">
+                            <field name="current_latitude"/>
+                            <field name="current_longitude"/>
+                            <field name="current_speed"/>
+                            <field name="current_heading"/>
+                            <field name="last_location_update"/>
+                        </group>
+                    </group>
+                    <group>
+                        <group string="Statistics">
+                            <field name="total_distance"/>
+                            <field name="monthly_distance"/>
+                            <field name="average_fuel_consumption"/>
+                        </group>
+                        <group string="Status">
+                            <field name="maintenance_due" widget="boolean"/>
+                            <field name="next_maintenance_date"/>
+                            <field name="total_fuel_cost"/>
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>

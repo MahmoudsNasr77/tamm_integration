@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="tamm_fleet.MapView" owl="1">
+        <div class="o_tamm_map_view">
+            <h3>Vehicle Realtime Map</h3>
+            <div id="tamm_map" style="height: 600px; width: 100%; border-radius: 8px;"></div>
+        </div>
+    </t>
+</templates>

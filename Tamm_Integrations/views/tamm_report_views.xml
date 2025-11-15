@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_tamm_report_pivot" model="ir.ui.view">
+        <field name="name">tamm.report.pivot</field>
+        <field name="model">tamm.report</field>
+        <field name="arch" type="xml">
+            <pivot string="Fleet Analytics">
+                <field name="vehicle_id" type="row"/>
+                <field name="date" interval="month" type="col"/>
+                <field name="total_distance" type="measure"/>
+                <field name="total_fuel" type="measure"/>
+                <field name="total_cost" type="measure"/>
+                <field name="fuel_efficiency" type="measure"/>
+            </pivot>
+        </field>
+    </record>
+
+    <record id="view_tamm_report_graph" model="ir.ui.view">
+        <field name="name">tamm.report.graph</field>
+        <field name="model">tamm.report</field>
+        <field name="arch" type="xml">
+            <graph string="Fleet Analytics">
+                <field name="date" interval="month"/>
+                <field name="total_distance" type="measure"/>
+                <field name="total_fuel" type="measure"/>
+            </graph>
+        </field>
+    </record>
+
+    <record id="view_tamm_report_search" model="ir.ui.view">
+        <field name="name">tamm.report.search</field>
+        <field name="model">tamm.report</field>
+        <field name="arch" type="xml">
+            <search string="Search Reports">
+                <field name="vehicle_id"/>
+                <filter name="this_month" string="This Month" 
+                        domain="[('date', '&gt;=', context_today().strftime('%Y-%m-01'))]"/>
+                <filter name="this_year" string="This Year" 
+                        domain="[('date', '&gt;=', context_today().strftime('%Y-01-01'))]"/>
+                <group expand="1" string="Group By">
+                    <filter name="group_vehicle" string="Vehicle" context="{'group_by': 'vehicle_id'}"/>
+                    <filter name="group_month" string="Month" context="{'group_by': 'date:month'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_tamm_report" model="ir.actions.act_window">
+        <field name="name">Fleet Analytics</field>
+        <field name="res_model">tamm.report</field>
+        <field name="view_mode">pivot,graph</field>
+        <field name="context">{'search_default_this_month': 1}</field>
+    </record>
+</odoo>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="tamm_fleet.Dashboard" owl="1">
+        <div class="o_tamm_dashboard">
+            <div class="o_dashboard_header">
+                <h2>Tamm Fleet Dashboard</h2>
+                <button class="btn btn-primary" t-on-click="refreshData">
+                    <i class="fa fa-refresh"/> Sync &amp; View Vehicles
+                </button>
+            </div>
+        </div>
+    </t>
+</templates>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_tamm_driver_list" model="ir.ui.view">
+        <field name="name">tamm.driver.list</field>
+        <field name="model">tamm.driver</field>
+        <field name="arch" type="xml">
+            <list string="Driver Performance">
+                <field name="date"/>
+                <field name="employee_id"/>
+                <field name="vehicle_id"/>
+                <field name="distance_driven"/>
+                <field name="driving_time"/>
+                <field name="speeding_count"/>
+                <field name="harsh_braking_count"/>
+                <field name="harsh_acceleration_count"/>
+                <field name="safety_score" widget="progressbar"/>
+                <field name="score_category" widget="badge" 
+                       decoration-success="score_category == 'excellent'"
+                       decoration-info="score_category == 'good'"
+                       decoration-warning="score_category == 'average'"
+                       decoration-danger="score_category == 'poor'"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_tamm_driver_form" model="ir.ui.view">
+        <field name="name">tamm.driver.form</field>
+        <field name="model">tamm.driver</field>
+        <field name="arch" type="xml">
+            <form string="Driver Performance">
+                <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="safety_score" widget="progressbar"/>
+                        </h1>
+                        <h3>
+                            <field name="score_category" widget="badge"/>
+                        </h3>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="employee_id"/>
+                            <field name="vehicle_id"/>
+                            <field name="date"/>
+                        </group>
+                        <group>
+                            <field name="distance_driven"/>
+                            <field name="driving_time"/>
+                            <field name="idle_time"/>
+                        </group>
+                    </group>
+                    <group string="Performance Metrics">
+                        <group>
+                            <field name="speeding_count"/>
+                            <field name="harsh_braking_count"/>
+                        </group>
+                        <group>
+                            <field name="harsh_acceleration_count"/>
+                        </group>
+                    </group>
+                    <group string="Notes">
+                        <field name="notes" nolabel="1"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_tamm_driver_search" model="ir.ui.view">
+        <field name="name">tamm.driver.search</field>
+        <field name="model">tamm.driver</field>
+        <field name="arch" type="xml">
+            <search string="Search Driver Performance">
+                <field name="employee_id"/>
+                <field name="vehicle_id"/>
+                <filter name="excellent" string="Excellent" 
+                        domain="[('score_category', '=', 'excellent')]"/>
+                <filter name="poor" string="Poor Performance" 
+                        domain="[('score_category', '=', 'poor')]"/>
+                <separator/>
+                <filter name="this_month" string="This Month" 
+                        domain="[('date', '&gt;=', context_today().strftime('%Y-%m-01'))]"/>
+                <group expand="0" string="Group By">
+                    <filter name="group_driver" string="Driver" context="{'group_by': 'employee_id'}"/>
+                    <filter name="group_vehicle" string="Vehicle" context="{'group_by': 'vehicle_id'}"/>
+                    <filter name="group_category" string="Score Category" 
+                            context="{'group_by': 'score_category'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_tamm_driver" model="ir.actions.act_window">
+        <field name="name">Driver Performance</field>
+        <field name="res_model">tamm.driver</field>
+        <field name="view_mode">list,form</field>
+        <field name="context">{'search_default_this_month': 1}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_empty_folder">
+                No driver performance data
+            </p>
+        </field>
+    </record>
+</odoo>

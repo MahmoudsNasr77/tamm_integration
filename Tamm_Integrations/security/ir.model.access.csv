@@ -1,0 +1,17 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_tamm_config_user,tamm.config.user,model_tamm_config,group_tamm_user,1,0,0,0
+access_tamm_config_manager,tamm.config.manager,model_tamm_config,group_tamm_manager,1,1,1,1
+access_tamm_tracking_user,tamm.tracking.user,model_tamm_tracking,group_tamm_user,1,0,0,0
+access_tamm_tracking_manager,tamm.tracking.manager,model_tamm_tracking,group_tamm_manager,1,1,1,1
+access_tamm_maintenance_user,tamm.maintenance.user,model_tamm_maintenance,group_tamm_user,1,1,1,0
+access_tamm_maintenance_manager,tamm.maintenance.manager,model_tamm_maintenance,group_tamm_manager,1,1,1,1
+access_tamm_fuel_log_user,tamm.fuel.log.user,model_tamm_fuel_log,group_tamm_user,1,1,1,0
+access_tamm_fuel_log_manager,tamm.fuel.log.manager,model_tamm_fuel_log,group_tamm_manager,1,1,1,1
+access_tamm_driver_user,tamm.driver.user,model_tamm_driver,group_tamm_user,1,0,0,0
+access_tamm_driver_manager,tamm.driver.manager,model_tamm_driver,group_tamm_manager,1,1,1,1
+access_tamm_route_user,tamm.route.user,model_tamm_route,group_tamm_user,1,1,1,0
+access_tamm_route_manager,tamm.route.manager,model_tamm_route,group_tamm_manager,1,1,1,1
+access_tamm_alert_user,tamm.alert.user,model_tamm_alert,group_tamm_user,1,1,0,0
+access_tamm_alert_manager,tamm.alert.manager,model_tamm_alert,group_tamm_manager,1,1,1,1
+access_tamm_report_user,tamm.report.user,model_tamm_report,group_tamm_user,1,0,0,0
+access_tamm_report_manager,tamm.report.manager,model_tamm_report,group_tamm_manager,1,0,0,0

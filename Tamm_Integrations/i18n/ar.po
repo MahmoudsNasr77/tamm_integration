@@ -1,0 +1,750 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-11-10 16:02+0000\n"
+"PO-Revision-Date: 2025-11-10 16:02+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+msgid "<span class=\"badge text-bg-warning\">\n                                                <i class=\"fa fa-wrench\"/> Maintenance Due\n                                            </span>"
+msgstr "<span class=\"badge text-bg-warning\">\n                                                <i class=\"fa fa-wrench\"/> الصيانة مستحقة\n                                            </span>"
+
+msgid "<span class=\"o_stat_text\">Mark as</span>\n                                <span class=\"o_stat_text\">Resolved</span>"
+msgstr "<span class=\"o_stat_text\">تعيين كـ</span>\n                                <span class=\"o_stat_text\">تم الحل</span>"
+
+msgid "<span class=\"o_stat_text\">Sync</span>\n                        <span class=\"o_stat_text\">Tamm</span>"
+msgstr "<span class=\"o_stat_text\">مزامنة</span>\n                        <span class=\"o_stat_text\">تم</span>"
+
+msgid "API Configuration"
+msgstr "إعداد واجهة البرمجة (API)"
+
+msgid "API Key"
+msgstr "مفتاح واجهة البرمجة (API Key)"
+
+msgid "API Secret"
+msgstr "الرمز السري لواجهة البرمجة (API Secret)"
+
+msgid "API returned status code: %s"
+msgstr "واجهة البرمجة أعادت رمز الحالة: %s"
+
+msgid "Accident"
+msgstr "حادث"
+
+msgid "Active"
+msgstr "نشط"
+
+msgid "Actual Distance (km)"
+msgstr "المسافة الفعلية (كم)"
+
+msgid "Actual Fuel (L)"
+msgstr "الوقود الفعلي (لتر)"
+
+msgid "Address"
+msgstr "العنوان"
+
+msgid "Alert"
+msgstr "تنبيه"
+
+msgid "Alert Type"
+msgstr "نوع التنبيه"
+
+msgid "Alerts"
+msgstr "التنبيهات"
+
+msgid "All Alerts"
+msgstr "جميع التنبيهات"
+
+msgid "Altitude (m)"
+msgstr "الارتفاع (متر)"
+
+msgid "Average (60-74)"
+msgstr "متوسط (60–74)"
+
+msgid "Average Speed (km/h)"
+msgstr "متوسط السرعة (كم/س)"
+
+msgid "Avg Fuel (L/100km)"
+msgstr "متوسط استهلاك الوقود (لتر/100كم)"
+
+msgid "Base URL for Tamm API endpoint"
+msgstr "الرابط الأساسي لنقطة نهاية واجهة تم"
+
+msgid "Battery Low"
+msgstr "انخفاض مستوى البطارية"
+
+msgid "Battery Replacement"
+msgstr "استبدال البطارية"
+
+msgid "Brake Service"
+msgstr "خدمة الفرامل"
+
+msgid "Cancel"
+msgstr "إلغاء"
+
+msgid "Cancelled"
+msgstr "تم الإلغاء"
+
+msgid "Cleaning"
+msgstr "تنظيف"
+
+msgid "Company"
+msgstr "الشركة"
+
+msgid "Complete"
+msgstr "إكمال"
+
+msgid "Completed"
+msgstr "مكتمل"
+
+msgid "Configuration"
+msgstr "الإعدادات"
+
+msgid "Configuration Name"
+msgstr "اسم الإعداد"
+
+msgid "Configuration name must be unique per company!"
+msgstr "يجب أن يكون اسم الإعداد فريدًا لكل شركة!"
+
+msgid "Configure Tamm Integration"
+msgstr "تهيئة تكامل تم"
+
+msgid "Configure your vehicles with Tamm integration to see them here."
+msgstr "قم بربط مركباتك مع تكامل تم لعرضها هنا."
+
+msgid "Connection to Tamm API successful!"
+msgstr "تم الاتصال بواجهة تم بنجاح!"
+
+msgid "Cost"
+msgstr "التكلفة"
+
+msgid "Create a new fuel log"
+msgstr "إنشاء سجل وقود جديد"
+
+msgid "Create a new route"
+msgstr "إنشاء مسار جديد"
+
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+msgid "Created on"
+msgstr "تاريخ الإنشاء"
+
+msgid "Critical"
+msgstr "حرج"
+
+msgid "Currency"
+msgstr "العملة"
+
+msgid "Current Heading (°)"
+msgstr "الاتجاه الحالي (°)"
+
+msgid "Current Latitude"
+msgstr "خط العرض الحالي"
+
+msgid "Current Location"
+msgstr "الموقع الحالي"
+
+msgid "Current Longitude"
+msgstr "خط الطول الحالي"
+
+msgid "Current Speed (km/h)"
+msgstr "السرعة الحالية (كم/س)"
+
+msgid "Dashboard"
+msgstr "لوحة المعلومات"
+
+msgid "Date"
+msgstr "التاريخ"
+
+msgid "Description"
+msgstr "الوصف"
+
+msgid "Diesel"
+msgstr "ديزل"
+
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+msgid "Distance (km)"
+msgstr "المسافة (كم)"
+
+msgid "Distance And Fuel"
+msgstr "المسافة والوقود"
+
+msgid "Distance Driven (km)"
+msgstr "المسافة المقطوعة (كم)"
+
+msgid "Driver"
+msgstr "السائق"
+
+msgid "Driver Performance"
+msgstr "أداء السائق"
+
+msgid "Drivers"
+msgstr "السائقون"
+
+msgid "Driving Time (hours)"
+msgstr "زمن القيادة (بالساعات)"
+
+msgid "Dropdown menu"
+msgstr "قائمة منسدلة"
+
+msgid "Due"
+msgstr "مستحق"
+
+msgid "Due Date"
+msgstr "تاريخ الاستحقاق"
+
+msgid "Duration (hours)"
+msgstr "المدة (بالساعات)"
+
+msgid "Electric"
+msgstr "كهربائي"
+
+msgid "End Latitude"
+msgstr "خط العرض للنهاية"
+
+msgid "End Location"
+msgstr "موقع النهاية"
+
+msgid "End Longitude"
+msgstr "خط الطول للنهاية"
+
+msgid "End Time"
+msgstr "وقت النهاية"
+
+msgid "Engine Fault"
+msgstr "عطل في المحرك"
+
+msgid "Engine Off"
+msgstr "المحرك مطفأ"
+
+msgid "Engine On"
+msgstr "المحرك يعمل"
+
+msgid "Engine Status"
+msgstr "حالة المحرك"
+
+msgid "Error"
+msgstr "خطأ"
+
+msgid "Estimated Cost"
+msgstr "التكلفة المقدّرة"
+
+msgid "Estimated Duration (hours)"
+msgstr "المدة المقدّرة (ساعات)"
+
+msgid "Estimated Fuel (L)"
+msgstr "الوقود المقدّر (لتر)"
+
+msgid "Excellent"
+msgstr "ممتاز"
+
+msgid "Excellent (90-100)"
+msgstr "ممتاز (90-100)"
+
+msgid "Failed"
+msgstr "فشل"
+
+msgid "Failed to connect: %s"
+msgstr "فشل الاتصال: %s"
+
+msgid "Fleet Analytics"
+msgstr "تحليلات الأسطول"
+
+msgid "Fleet Analytics Report"
+msgstr "تقرير تحليلات الأسطول"
+
+msgid "Fleet Dashboard"
+msgstr "لوحة معلومات الأسطول"
+
+msgid "Fuel"
+msgstr "الوقود"
+
+msgid "Fuel Analysis"
+msgstr "تحليل الوقود"
+
+msgid "Fuel Consumption"
+msgstr "استهلاك الوقود"
+
+msgid "Fuel Efficiency (km/L)"
+msgstr "كفاءة الوقود (كم/لتر)"
+
+msgid "Fuel Log"
+msgstr "سجل الوقود"
+
+msgid "Fuel Logs"
+msgstr "سجلات الوقود"
+
+msgid "Fuel Type"
+msgstr "نوع الوقود"
+
+msgid "GPS Device ID"
+msgstr "معرّف جهاز التتبع (GPS)"
+
+msgid "GPS Provider"
+msgstr "مزود خدمة GPS"
+
+msgid "Gasoline 91"
+msgstr "بنزين 91"
+
+msgid "Gasoline 95"
+msgstr "بنزين 95"
+
+msgid "Geofence Violation"
+msgstr "تجاوز حدود المنطقة الجغرافية"
+
+msgid "Good (75-89)"
+msgstr "جيد (75-89)"
+
+msgid "Group By"
+msgstr "تجميع حسب"
+
+msgid "Harsh Acceleration"
+msgstr "تسارع مفاجئ"
+
+msgid "Harsh Braking"
+msgstr "توقف مفاجئ"
+
+msgid "Heading (degrees)"
+msgstr "الاتجاه (بالدرجات)"
+
+msgid "High"
+msgstr "مرتفع"
+
+msgid "Hybrid"
+msgstr "هجيني"
+
+msgid "ID"
+msgstr "المعرّف"
+
+msgid "Idle"
+msgstr "في وضع الخمول"
+
+msgid "Idle Time (hours)"
+msgstr "مدة الخمول (ساعات)"
+
+msgid "In Progress"
+msgstr "قيد التنفيذ"
+
+msgid "Inspection"
+msgstr "فحص"
+
+msgid "Integration"
+msgstr "التكامل"
+
+msgid "Invoice Reference"
+msgstr "مرجع الفاتورة"
+
+msgid "L/100km"
+msgstr "لتر/100كم"
+
+msgid "Last Location Update"
+msgstr "آخر تحديث للموقع"
+
+msgid "Last Sync"
+msgstr "آخر مزامنة"
+
+msgid "Last Sync Error"
+msgstr "آخر خطأ في المزامنة"
+
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+msgid "Last Updated on"
+msgstr "تاريخ آخر تحديث"
+
+msgid "Last update:"
+msgstr "آخر تحديث:"
+
+msgid "Latitude"
+msgstr "خط العرض"
+
+msgid "Location"
+msgstr "الموقع"
+
+msgid "Location Address"
+msgstr "عنوان الموقع"
+
+msgid "Locations"
+msgstr "المواقع"
+
+msgid "Longitude"
+msgstr "خط الطول"
+
+msgid "Low"
+msgstr "منخفض"
+
+msgid "Low Fuel"
+msgstr "انخفاض مستوى الوقود"
+
+msgid "Maintenance"
+msgstr "الصيانة"
+
+msgid "Maintenance Calendar"
+msgstr "تقويم الصيانة"
+
+msgid "Maintenance Due"
+msgstr "الصيانة مستحقة"
+
+msgid "Maintenance Records"
+msgstr "سجلات الصيانة"
+
+msgid "Maintenance Type"
+msgstr "نوع الصيانة"
+
+msgid "Manager"
+msgstr "المدير"
+
+msgid "Medium"
+msgstr "متوسط"
+
+msgid "Month"
+msgstr "الشهر"
+
+msgid "Monthly Distance (km)"
+msgstr "المسافة الشهرية (كم)"
+
+msgid "Next Maintenance"
+msgstr "الصيانة القادمة"
+
+msgid "No active Tamm configuration found. Please configure Tamm integration first."
+msgstr "لا يوجد إعداد نشط لتكامل تم. يرجى تهيئة تكامل تم أولاً."
+
+msgid "No alerts"
+msgstr "لا توجد تنبيهات"
+
+msgid "No driver performance data"
+msgstr "لا توجد بيانات أداء للسائق"
+
+msgid "No tracking data"
+msgstr "لا توجد بيانات تتبع"
+
+msgid "No vehicles configured with Tamm"
+msgstr "لم يتم ربط أي مركبة مع نظام تم"
+
+msgid "Notes"
+msgstr "ملاحظات"
+
+msgid "Number of Alerts"
+msgstr "عدد التنبيهات"
+
+msgid "Odometer (km)"
+msgstr "قراءة العداد (كم)"
+
+msgid "Odometer Reading (km)"
+msgstr "قراءة عداد المسافة (كم)"
+
+msgid "Oil Change"
+msgstr "تغيير الزيت"
+
+msgid "Open Alerts"
+msgstr "التنبيهات المفتوحة"
+
+msgid "Other"
+msgstr "أخرى"
+
+msgid "Pending"
+msgstr "قيد الانتظار"
+
+msgid "Performance Metrics"
+msgstr "مؤشرات الأداء"
+
+msgid "Planned"
+msgstr "مخطط"
+
+msgid "Planned Distance (km)"
+msgstr "المسافة المخططة (كم)"
+
+msgid "Poor (0-59)"
+msgstr "ضعيف (0-59)"
+
+msgid "Poor Performance"
+msgstr "أداء ضعيف"
+
+msgid "Price per Liter"
+msgstr "السعر لكل لتر"
+
+msgid "Quantity (Liters)"
+msgstr "الكمية (لترات)"
+
+msgid "Refresh Data"
+msgstr "تحديث البيانات"
+
+msgid "Repair"
+msgstr "إصلاح"
+
+msgid "Reports"
+msgstr "التقارير"
+
+msgid "Resolution"
+msgstr "الحل"
+
+msgid "Resolution Notes"
+msgstr "ملاحظات الحل"
+
+msgid "Resolve"
+msgstr "حل"
+
+msgid "Resolved"
+msgstr "تم الحل"
+
+msgid "Resolved By"
+msgstr "تم الحل بواسطة"
+
+msgid "Resolved Date"
+msgstr "تاريخ الحل"
+
+msgid "Route"
+msgstr "المسار"
+
+msgid "Route Name"
+msgstr "اسم المسار"
+
+msgid "Route Optimized"
+msgstr "تم تحسين المسار"
+
+msgid "Routes"
+msgstr "المسارات"
+
+msgid "Safety Score"
+msgstr "درجة السلامة"
+
+msgid "Schedule a new maintenance"
+msgstr "جدولة صيانة جديدة"
+
+msgid "Scheduled"
+msgstr "مجدول"
+
+msgid "Score Category"
+msgstr "فئة التقييم"
+
+msgid "Search Driver Performance"
+msgstr "بحث عن أداء السائق"
+
+msgid "Search Fuel Logs"
+msgstr "بحث في سجلات الوقود"
+
+msgid "Search Maintenance"
+msgstr "بحث في الصيانة"
+
+msgid "Search Reports"
+msgstr "بحث في التقارير"
+
+msgid "Search Routes"
+msgstr "بحث في المسارات"
+
+msgid "Search Tracking"
+msgstr "بحث في سجلات التتبع"
+
+msgid "Service Center"
+msgstr "مركز الخدمة"
+
+msgid "Set up your Tamm API credentials to sync vehicle data."
+msgstr "قم بإعداد بيانات واجهة تم لمزامنة بيانات المركبات."
+
+msgid "Severity"
+msgstr "الخطورة"
+
+msgid "Speed (km/h)"
+msgstr "السرعة (كم/س)"
+
+msgid "Speeding"
+msgstr "تجاوز السرعة"
+
+msgid "Speeding Violations"
+msgstr "مخالفات السرعة"
+
+msgid "Start"
+msgstr "البدء"
+
+msgid "Start Latitude"
+msgstr "خط العرض للبداية"
+
+msgid "Start Location"
+msgstr "موقع البداية"
+
+msgid "Start Longitude"
+msgstr "خط الطول للبداية"
+
+msgid "Start Time"
+msgstr "وقت البدء"
+
+msgid "Station Name"
+msgstr "اسم المحطة"
+
+msgid "Statistics"
+msgstr "الإحصائيات"
+
+msgid "Status"
+msgstr "الحالة"
+
+msgid "Success"
+msgstr "نجاح"
+
+msgid "Sync Interval (minutes)"
+msgstr "فترة المزامنة (بالدقائق)"
+
+msgid "Sync Now"
+msgstr "مزامنة الآن"
+
+msgid "Sync Started"
+msgstr "بدأت المزامنة"
+
+msgid "Sync Status"
+msgstr "حالة المزامنة"
+
+msgid "Syncing %s vehicles..."
+msgstr "يتم مزامنة %s من المركبات..."
+
+msgid "Tamm"
+msgstr "تم"
+
+msgid "Tamm API URL"
+msgstr "رابط واجهة تم (API URL)"
+
+msgid "Tamm Configuration"
+msgstr "إعداد تكامل تم"
+
+msgid "Tamm Configurations"
+msgstr "إعدادات تم"
+
+msgid "Tamm Fleet"
+msgstr "أسطول تم"
+
+msgid "Tamm Fleet Dashboard"
+msgstr "لوحة معلومات أسطول تم"
+
+msgid "Tamm Fleet Management"
+msgstr "إدارة أسطول تم"
+
+msgid "Tamm Fleet Management System"
+msgstr "نظام إدارة أسطول تم"
+
+msgid "Tamm Integration"
+msgstr "تكامل تم"
+
+msgid "Tamm Settings"
+msgstr "إعدادات تم"
+
+msgid "Tamm System Configuration"
+msgstr "تهيئة نظام تم"
+
+msgid "Tamm Vehicle ID"
+msgstr "معرّف المركبة في تم"
+
+msgid "Tamm: Check Due Maintenance"
+msgstr "تم: التحقق من الصيانة المستحقة"
+
+msgid "Tamm: Sync Vehicle Data"
+msgstr "تم: مزامنة بيانات المركبات"
+
+msgid "Technician"
+msgstr "الفني"
+
+msgid "Test Connection"
+msgstr "اختبار الاتصال"
+
+msgid "Theft Alert"
+msgstr "تنبيه سرقة"
+
+msgid "This Month"
+msgstr "هذا الشهر"
+
+msgid "This Week"
+msgstr "هذا الأسبوع"
+
+msgid "This Year"
+msgstr "هذا العام"
+
+msgid "Timestamp"
+msgstr "الطابع الزمني"
+
+msgid "Tire Pressure Warning"
+msgstr "تحذير ضغط الإطارات"
+
+msgid "Tire Replacement"
+msgstr "استبدال الإطارات"
+
+msgid "Tire Rotation"
+msgstr "تدوير الإطارات"
+
+msgid "Today"
+msgstr "اليوم"
+
+msgid "Total"
+msgstr "الإجمالي"
+
+msgid "Total Cost"
+msgstr "إجمالي التكلفة"
+
+msgid "Total Distance (km)"
+msgstr "إجمالي المسافة (كم)"
+
+msgid "Total Fuel (L)"
+msgstr "إجمالي الوقود (لتر)"
+
+msgid "Total Fuel Cost"
+msgstr "إجمالي تكلفة الوقود"
+
+msgid "Tracking"
+msgstr "التتبع"
+
+msgid "Tracking History"
+msgstr "سجل التتبع"
+
+msgid "Tracking Record"
+msgstr "سجل تتبع"
+
+msgid "Tracking Records"
+msgstr "سجلات التتبع"
+
+msgid "Type"
+msgstr "النوع"
+
+msgid "Unresolve"
+msgstr "إلغاء الحل"
+
+msgid "User"
+msgstr "المستخدم"
+
+msgid "Vehicle"
+msgstr "المركبة"
+
+msgid "Vehicle Alert"
+msgstr "تنبيه المركبة"
+
+msgid "Vehicle Alerts"
+msgstr "تنبيهات المركبة"
+
+msgid "Vehicle Maintenance"
+msgstr "صيانة المركبة"
+
+msgid "Vehicle Route"
+msgstr "مسار المركبة"
+
+msgid "Vehicle Tracking"
+msgstr "تتبع المركبة"
+
+msgid "Vehicle tracking data will appear here after synchronization."
+msgstr "ستظهر بيانات تتبع المركبات هنا بعد المزامنة."
+
+msgid "View Alerts"
+msgstr "عرض التنبيهات"
+
+msgid "View Tracking"
+msgstr "عرض التتبع"
+
+msgid "https://api.tamm.sa"
+msgstr "https://api.tamm.sa"
+
+msgid "km"
+msgstr "كم"
+
+msgid "km/h"
+msgstr "كم/س"

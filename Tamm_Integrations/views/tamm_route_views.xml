@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_tamm_route_list" model="ir.ui.view">
+        <field name="name">tamm.route.list</field>
+        <field name="model">tamm.route</field>
+        <field name="arch" type="xml">
+            <list string="Routes">
+                <field name="name"/>
+                <field name="vehicle_id"/>
+                <field name="driver_id"/>
+                <field name="start_time"/>
+                <field name="end_time"/>
+                <field name="actual_distance"/>
+                <field name="duration"/>
+                <field name="status" widget="badge" 
+                       decoration-info="status == 'planned'"
+                       decoration-warning="status == 'in_progress'"
+                       decoration-success="status == 'completed'"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_tamm_route_form" model="ir.ui.view">
+        <field name="name">tamm.route.form</field>
+        <field name="model">tamm.route</field>
+        <field name="arch" type="xml">
+            <form string="Route">
+                <header>
+                    <button name="action_start" string="Start" type="object" 
+                            invisible="status != 'planned'" class="btn-primary"/>
+                    <button name="action_complete" string="Complete" type="object" 
+                            invisible="status != 'in_progress'" class="btn-primary"/>
+                    <button name="action_cancel" string="Cancel" type="object" 
+                            invisible="status in ['completed', 'cancelled']"/>
+                    <field name="status" widget="statusbar" 
+                           statusbar_visible="planned,in_progress,completed"/>
+                </header>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="vehicle_id"/>
+                            <field name="driver_id"/>
+                            <field name="optimized" widget="boolean"/>
+                        </group>
+                        <group>
+                            <field name="start_time"/>
+                            <field name="end_time"/>
+                            <field name="duration"/>
+                        </group>
+                    </group>
+                    <group string="Locations">
+                        <group>
+                            <field name="start_location"/>
+                            <field name="start_latitude"/>
+                            <field name="start_longitude"/>
+                        </group>
+                        <group>
+                            <field name="end_location"/>
+                            <field name="end_latitude"/>
+                            <field name="end_longitude"/>
+                        </group>
+                    </group>
+                    <group string="Distance And Fuel">
+                        <group>
+                            <field name="planned_distance"/>
+                            <field name="actual_distance"/>
+                            <field name="duration_estimate"/>
+                        </group>
+                        <group>
+                            <field name="fuel_estimate"/>
+                            <field name="fuel_actual"/>
+                            <field name="cost_estimate"/>
+                            <field name="currency_id" invisible="1"/>
+                        </group>
+                    </group>
+                    <group string="Notes">
+                        <field name="notes" nolabel="1"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_tamm_route_search" model="ir.ui.view">
+        <field name="name">tamm.route.search</field>
+        <field name="model">tamm.route</field>
+        <field name="arch" type="xml">
+            <search string="Search Routes">
+                <field name="name"/>
+                <field name="vehicle_id"/>
+                <field name="driver_id"/>
+                <filter name="in_progress" string="In Progress" 
+                        domain="[('status', '=', 'in_progress')]"/>
+                <filter name="completed" string="Completed" 
+                        domain="[('status', '=', 'completed')]"/>
+                <separator/>
+                <filter name="today" string="Today" 
+                        domain="[('start_time', '&gt;=', context_today().strftime('%Y-%m-%d 00:00:00'))]"/>
+                <group expand="0" string="Group By">
+                    <filter name="group_vehicle" string="Vehicle" context="{'group_by': 'vehicle_id'}"/>
+                    <filter name="group_driver" string="Driver" context="{'group_by': 'driver_id'}"/>
+                    <filter name="group_status" string="Status" context="{'group_by': 'status'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_tamm_route" model="ir.actions.act_window">
+        <field name="name">Routes</field>
+        <field name="res_model">tamm.route</field>
+        <field name="view_mode">list,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a new route
+            </p>
+        </field>
+    </record>
+</odoo>
