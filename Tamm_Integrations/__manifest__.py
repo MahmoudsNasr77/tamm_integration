@@ -18,9 +18,9 @@
     'currency': 'USD',
 
     'images': [
-        'Tamm_Integrations/Tamm_Integrations/static/description/cover.png',
-        'Tamm_Integrations/static/description/icon.png',
-        'Tamm_Integrations/static/description/1.png',
+        'static/description/cover.png',
+        'static/description/icon.png',
+        'static/description/1.png',
         'Tamm_Integrations/static/description/2.png',
         'Tamm_Integrations/static/description/3.png',
         'Tamm_Integrations/static/description/4.png',
