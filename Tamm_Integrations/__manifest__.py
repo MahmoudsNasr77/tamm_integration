@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': 'Tamm Fleet Management Integration',
+    'name': 'Saudi Arabia TAMM Fleet Management Integration',
     'summary': 'Advanced Integration with the Saudi TAMM Fleet Management System including Maintenance, Fuel, Analytics, and Tracking.',
     'version': '18.0.1.0.0',
     'category': 'Fleet Management',
