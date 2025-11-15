@@ -14,8 +14,8 @@
 
     'depends': ['base', 'fleet', 'hr'],
 
-    'price': 59.99,
-    'currency': 'USD',
+    'price':2800 ,
+    'currency': 'SAR',
 
     'images': [
         'static/description/cover.png',
