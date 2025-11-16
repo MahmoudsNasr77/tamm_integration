@@ -14,7 +14,7 @@
 
     'depends': ['base', 'fleet', 'hr'],
 
-    'price':550 ,
+    'price':59.99 ,
     'currency': 'USD',
 
     'images': [
