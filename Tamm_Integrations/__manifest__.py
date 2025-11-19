@@ -6,7 +6,7 @@
     'category': 'Fleet Management',
     'author': 'Mahmoud Sabry Mohamed Ahmed',
     'maintainer': 'Mahmoud Sabry Mohamed Ahmed',
-    'website': 'https://mahmoudsnasr77.github.io/myportfolio/',
+    'website': 'mahmoudsabrynasr@gmail.com',
     'license': 'LGPL-3',
     'application': True,
     'installable': True,
